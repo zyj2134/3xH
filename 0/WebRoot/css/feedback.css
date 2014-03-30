@@ -1,0 +1,282 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	margin: 0px;
+	font-family: SimSon;
+	background: #f8f8f8;
+	line-height: 20px;
+}
+
+.shadow {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	filter: alpha(opacity=25);
+	opacity: 0.25;
+	z-index: 65534;
+	left: 0;
+}
+
+.pop {
+	display: none;
+	background: #fff;
+	line-height: 20px;
+	height: 280px;
+	width: 360px;
+	position: absolute;
+	z-index: 65535;
+	border: 2px solid #777;
+	box-shadow: 0 0 20px black;
+	background-color: #e5e5e5;
+	padding: 0 10px 10px 10px;
+}
+
+.pop-title {
+	height: 33px;
+	line-height: 33px;
+	color: #4a4a4a;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.pop-close{
+	width: 19px;
+	height: 19px;
+	display: block;
+	float: right;
+	border: 1px solid #999;
+	background-color: #eaeaea;
+	margin: 5px 0 0 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.pop-content {
+	border-radius: 8px;
+	-moz-border-radius: 8px; /* Old Firefox */
+	background-color: #fff;
+	padding: 40px 20px 20px 20px;
+	height: 180px;
+	box-shadow: inset 0px 1px 1px black;
+}
+
+.pop-msg {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 20px 40px;
+	text-align: center;
+}
+
+.pop-btn {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.pop-commit {
+	width: 105px;
+	height: 32px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #4a4a4a;
+	border: 1px solid #777;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+	margin: 0 5px;
+	border-radius: 3px;
+	-moz-border-radius: 3px; /* Old Firefox */
+	background: #e5e5e5; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmZmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2RmZTVkNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiM2JlYWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfff4),color-stop(40%, #dfe5d7), color-stop(100%, #b3bead) );	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* W3C */
+	filter: progid : DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead', GradientType = 0); /* IE6-8 */
+}
+
+.box-top {
+	height: 35px;
+	overflow: hidden;
+	border-bottom: solid 1px #C6CACD;
+	background: rgba(255, 255, 255, 0.9);
+	z-index: 1000;
+	box-shadow: 0 1px 4px rgba(49, 49, 64, 0.1);
+	position: relative;
+	top: 1px;
+	left: 1px;
+	right: 1px;
+}
+
+.top-content,.footer-content {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.nav {
+	list-style: none;
+	text-decoration: none;
+	color: #525252;
+}
+
+.top-content,.nav li {
+	height: 35px;
+	line-height: 35px;
+}
+
+.nav .item {
+	float: left;
+	margin: 0 8px 0 0;
+}
+
+.nav .link {
+	float: right;
+	margin: 0 3px;
+}
+
+.link a {
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #525252;
+}
+
+.box-content {
+	padding: 15px 0 50px 0;
+	position: relative;
+	width: 960px;
+	margin: 20px auto;
+}
+
+.content_err {
+	height: 20px;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+}
+
+.title {
+	height: 75px;
+	padding: 5px 20px 0 0;
+	margin: 0 10px;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #666;
+}
+
+.content {
+	border: 1px solid #d9d9d9;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px; /* Old Firefox */
+}
+
+.feedback {
+	font-size: 14px;
+	position: relative;
+}
+
+.inputLayer {
+	padding-bottom: 5px;
+	line-height: 29px;
+}
+
+.iptxt {
+	border: 1px solid #d0d0ce;
+	float: left;
+	margin-right: 10px;
+}
+
+.iptxt input {
+	height: 17px;
+	padding: 5px;
+}
+
+.iptxt input,.iptxt textarea {
+	margin: 0;
+	border-width: 1px 0 0 1px;
+	border-color: #eaeceb;
+	border-style: solid;
+	font-size: 14px;
+	color: #999;
+}
+
+.iptxt textarea {
+	float: left;
+	width: 733px;
+	height: 144px;
+	border: 0 none;
+	padding: 5px 10px;
+	line-height: 27px;
+	overflow: auto;
+	resize: none;
+}
+
+.clear {
+	clear: both;
+	zoom: 1;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+.contact {
+	padding: 15px 10px 15px 25px;
+}
+
+.contactTxt {
+	padding: 15px 0;
+	color: #999;
+}
+
+.contactIpt {
+	padding: 15px 0;
+}
+
+.emailTxt {
+	height: 30px;
+	line-height: 30px;
+	float: left;
+}
+
+.btnArea {
+	text-align: right;
+	padding: 10px 140px 30px;
+	position: relative;
+	zoom: 1;
+}
+
+.btn {
+	padding: 10px 25px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.box-footer {
+	margin-top: 80px;
+	padding: 8px 0;
+	background-color: #f0f0f0;
+	color: #878787;
+	text-align: center;
+	padding: 8px 0;
+}
