@@ -39,7 +39,8 @@ body{
 	left: 1px;
 	right: 1px;
 }
-.top-content {
+
+.top-content,.footer-content {
 	width: 960px;
 	margin: 0 auto;
 }
@@ -88,6 +89,17 @@ body{
 	font-size: 12px;
 }
 
+.box-footer {
+	font-size: 12px;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	color: #878787;
+	text-align: center;
+	padding: 8px 0;
+	background-color: #f0f0f0;
+	overflow: hidden;
+}
 </style>
 </head>
   
@@ -104,6 +116,12 @@ body{
 				<li class="link">
 					<a href="<%=basePath%>feedback/" target="_blank">意见反馈</a>
 				</li>
+				<li class="link">
+					<span>|</span>
+				</li>
+				<li class="link">
+					<a href="<%=basePath%>contact/">联系方式</a>
+				</li>
 				<li class="item">
 					<span>欢迎光临！</span>
 				</li>
@@ -117,8 +135,13 @@ body{
 	<div class="box-content">
 		<div class="component">
 		  <div class="page-tip">
-		    <span style="color:#CC0000;font-weight:bold;">公告：2014年3月31日起BAE2.0将禁止代码发布！</span>BAE3.0 要收费了，届时本网站将停止服务&nbsp;<a target="_blank" href="http://developer.baidu.com/wiki/index.php?title=docs/cplat/bae/bill">计费说明</a>
+		    <span style="color:#CC0000;font-weight:bold;">公告：2014年6月4日BAE2.0下线！</span>BAE3.0 要收费，BAE2.0的应用代码和数据库等服务最多保留至6月30号，届时本网站将停止服务&nbsp;<a target="_blank" href="http://developer.baidu.com/wiki/index.php?title=docs/cplat/bae/bill">计费说明</a>
 		  </div>
+		</div>
+	</div>
+	<div class="box-footer">
+		<div class="footer-content">
+			&copy; 2014 左右君
 		</div>
 	</div>
 </body>
